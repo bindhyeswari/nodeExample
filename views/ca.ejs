@@ -1,0 +1,48 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+    <script src="/javascripts/jquery.js"></script>
+    <script>
+        $(function(){
+            //console.log('test');
+
+            $('#counties').change(function(event){
+
+                $('#response').empty();
+
+                var county_name = $(this).children().eq(event.target.selectedIndex).val();
+                getCountyData(county_name);
+            });
+
+
+        });
+
+        function getCountyData(county_name){
+            $.getJSON('http://localhost:3000/ca/counties/' + county_name, function(data){
+                for (var prop in data.county) {
+                    if (data.county[prop])
+                        $('#response').append($('<span>').addClass('data').html(data.county[prop]));
+
+                }
+            });
+        }
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        Select county data:
+        <select name="counties" id="counties">
+            <option value="Monterey">Monterey</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="Santa Clara">Santa Clara</option>
+        </select>
+    </div>
+
+    <div id="response">
+
+
+    </div>
+
+</body>
+</html>

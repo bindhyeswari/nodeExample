@@ -1,0 +1,47 @@
+@import url(http://fonts.googleapis.com/css?family=Syncopate|Raleway:400,300,700,500);
+
+body {
+  padding: 50px;
+  font: 1em "Raleway", Helvetica, Arial, sans-serif;
+    background-color: #8c8c8c;
+    color: #b4b4b4;
+
+}
+
+div {
+    padding: 3em;
+    text-shadow: 1px 1px 1px #555;
+}
+
+h1 {
+    font-family: Syncopate;
+}
+
+a {
+  color: #00B7FF;
+}
+
+select {
+    border: 1px solid gray;
+    padding: 0.25em;
+    font: 300 0.85em Raleway;
+    background-color: transparent;
+}
+
+option {
+    border: none;
+    padding: 0.25em;
+    min-width: 20em;
+    font: 300 0.85em Raleway;
+}
+
+span.data {
+    margin: 0.25em;
+    padding: 0.3em 0.5em;
+    color: #b69260;
+    background-color: #3c3f41;
+    display: inline-block;
+    border-radius: 0.15em;
+    text-shadow: 1px 1px 1px #2d2015;
+    font-size: 0.85em;
+}
